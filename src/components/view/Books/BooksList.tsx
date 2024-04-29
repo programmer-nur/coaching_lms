@@ -38,7 +38,7 @@ const BooksList = ({ books }: { books: IBook[] }) => {
               </div>
 
               <div className="p-2">
-                <h2 className="mt-4 uppercase text-base font-semibold text-grayBlack">
+                <h2 className="mt-4 uppercase sm:text-base sm:font-semibold text-grayBlack">
                   {item.title}
                 </h2>
 

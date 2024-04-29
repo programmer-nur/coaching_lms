@@ -34,36 +34,34 @@ const SubCategoryCourses = ({ courses }: { courses: ICourse[] }) => {
             }}
             dataSource={courses}
             renderItem={(item: ICourse) => (
-              <List.Item>
-                <div className=" h-full bg-white rounded border border-gray-200 p-2 shadow-xl transition  hover:shadow-pink-white/10">
-                  <div className="w-full rounded h-[200px]">
-                    <Image
-                      src={item?.banner}
-                      height={800}
-                      width={800}
-                      quality={75}
-                      alt="image"
-                      className="w-full rounded h-full"
-                    />
-                  </div>
+              <List.Item className=" h-full bg-white rounded border border-gray-200 p-2 shadow-xl transition  hover:shadow-pink-white/10">
+                <div className="w-full rounded h-[200px]">
+                  <Image
+                    src={item?.banner}
+                    height={800}
+                    width={800}
+                    quality={75}
+                    alt="image"
+                    className="w-full rounded h-full"
+                  />
+                </div>
 
-                  <div className="p-2 flex flex-col gap-2">
-                    <h2 className="mt-4 uppercase text-lg font-semibold text-grayBlack">
-                      {item?.title}
-                    </h2>
-                    <p className="text-grayBlack overflow-hidden text-sm line-clamp-3">
-                      {item?.description}
-                    </p>
-                  </div>
+                <div className="p-2 flex flex-col gap-2">
+                  <h2 className="mt-4 uppercase text-lg font-semibold text-grayBlack">
+                    {item?.title}
+                  </h2>
+                  <p className="text-grayBlack overflow-hidden text-sm line-clamp-2">
+                    {item?.description}
+                  </p>
+                </div>
 
-                  <div>
-                    <Link
-                      className="py-2 flex justify-center items-center bg-slate-200 font-medium text-black"
-                      href={`/courses/${item?._id}`}
-                    >
-                      Courses Details
-                    </Link>
-                  </div>
+                <div>
+                  <Link
+                    className="py-2 flex justify-center items-center bg-slate-200 font-medium text-black"
+                    href={`/courses/${item?._id}`}
+                  >
+                    Courses Details
+                  </Link>
                 </div>
               </List.Item>
             )}

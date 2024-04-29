@@ -30,12 +30,12 @@ const SubCategoryCard = async ({ category }: { category: any }) => {
             </div>
           </div>
 
-          <div className="flex py-2 justify-between items-center gap-3">
+          <div className="flex py-2 flex-wrap justify-between items-center gap-3">
             {filterBySubCategory?.map((course: any) => (
               <div key={course?._id}>
                 <Link
                   href={`/sub-category/${course?._id}`}
-                  className="text-xl py-2 font-poppins text-mainBlue font-medium"
+                  className="text-base sm:text-lg py-2 font-poppins text-mainBlue font-medium"
                   key={course?.category_id?.title}
                 >
                   {course?.title}

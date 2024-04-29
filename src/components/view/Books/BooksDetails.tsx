@@ -29,7 +29,7 @@ const BooksDetails = ({ book }: { book: IBook }) => {
               Price: ${book?.price ? book.price : 0}
             </p>
 
-            <Button type="primary" block size="large">
+            <Button className="px-5" type="primary" block size="large">
               Add To Cart
             </Button>
           </div>

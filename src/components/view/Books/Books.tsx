@@ -3,6 +3,7 @@ import BooksList from "./BooksList";
 
 const Books = async () => {
   const books = await getAllBooks([{ name: "limit", value: "20" }]);
+
   return (
     <section className="bg-[rgb(245_252_252)]">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
@@ -15,7 +16,6 @@ const Books = async () => {
             Learn from the best of the best in the field.
           </p>
         </div>
-
         {<BooksList books={books?.data ? books?.data : []} />}
       </div>
     </section>

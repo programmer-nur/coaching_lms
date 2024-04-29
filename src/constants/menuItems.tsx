@@ -13,25 +13,29 @@ export const menuItems = [
         type: "group",
         children: [
           {
-            label: <Link href="/বি.সি.এস">বি.সি.এস</Link>,
+            label: <Link href="/courses">বি.সি.এস</Link>,
             children: [
               {
-                key: "bangla",
-                label: <Link href="/bangla">ব্যাংক</Link>,
+                key: "ভাইভা",
+                label: <Link href="/courses">ভাইভা</Link>,
+              },
+              {
+                key: "লিখিত",
+                label: <Link href="/courses">লিখিত</Link>,
               },
             ],
           },
           {
             key: "bank",
-            label: <Link href="/bangla">ব্যাংক</Link>,
+            label: <Link href="/courses">ব্যাংক</Link>,
           },
           {
             key: "primary",
-            label: <Link href="/english">প্রাইমারি</Link>,
+            label: <Link href="/courses">প্রাইমারি</Link>,
           },
           {
             key: "ntrca",
-            label: <Link href="/english">এন.টি.আর.সি.এ</Link>,
+            label: <Link href="/courses">এন.টি.আর.সি.এ</Link>,
           },
         ],
       },
