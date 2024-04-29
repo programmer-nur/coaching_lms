@@ -1,8 +1,15 @@
 import { getAllBooks } from "@/services/books/getAllBooks";
 import BooksList from "./BooksList";
+import SearchBox from "@/components/ui/SearchBox";
 
-const Books = async () => {
-  const books = await getAllBooks([{ name: "limit", value: "20" }]);
+const Books = async ({ searchParams }: { searchParams: any }) => {
+  const searchTerm = searchParams?.searchTerm || "";
+
+  const queryString = [
+    { name: "searchTerm", value: searchTerm },
+    { name: "limit", value: "20" },
+  ];
+  const books = await getAllBooks(queryString);
 
   return (
     <section className="bg-[rgb(245_252_252)]">
@@ -15,6 +22,11 @@ const Books = async () => {
           <p className="mt-4 text-base text-grayBlack">
             Learn from the best of the best in the field.
           </p>
+        </div>
+
+        <div className="mb-4 flex gap-1 justify-center items-center">
+          <p className="text-lg">Search:</p>
+          <SearchBox placeholder="Search Books..." />
         </div>
         {<BooksList books={books?.data ? books?.data : []} />}
       </div>

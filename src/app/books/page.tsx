@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   title: "Coaching | Books",
   description: "This is the Books Page",
 };
-const BooksPage = () => {
+const BooksPage = ({ searchParams }: { searchParams: any }) => {
   return (
     <div>
-      <Books />
+      <Books searchParams={searchParams} />
     </div>
   );
 };
