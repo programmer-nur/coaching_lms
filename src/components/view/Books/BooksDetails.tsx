@@ -29,11 +29,9 @@ const BooksDetails = ({ book }: { book: IBook }) => {
               Price: ${book?.price ? book.price : 0}
             </p>
 
-            <div>
-              <Button type="primary" block size="large">
-                Add To Cart
-              </Button>
-            </div>
+            <Button type="primary" block size="large">
+              Add To Cart
+            </Button>
           </div>
         </div>
       </div>

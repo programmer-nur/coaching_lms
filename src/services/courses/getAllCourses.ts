@@ -17,7 +17,6 @@ export const getAllCourses = async (args?: any) => {
     {
       next: {
         revalidate: 24 * 60 * 60,
-        tags: ["all-courses"],
       },
     }
   );

@@ -10,7 +10,7 @@ const Hero = () => {
         alt="section"
         className="absolute inset-0 -z-10 block h-full w-full object-cover dark:hidden"
       />
-      <div className="mx-auto py-16 max-w-7xl flex flex-col  items-center justify-between gap-8 md:gap-14 lg:flex-row px-4 sm:px-6 lg:px-8 ">
+      <div className="mx-auto py-8 sm:py-24 max-w-7xl flex flex-col  items-center justify-between gap-8 md:gap-14 lg:flex-row px-4 sm:px-6 lg:px-8 ">
         <div className="flex text-softBlack flex-col items-center justify-center lg:w-1/2 lg:items-start">
           <p className="text-base mb-1 font-normal">
             Anywhere access easy learning
@@ -30,13 +30,9 @@ const Hero = () => {
             GET STARTED
           </Link>
         </div>
-        <div className="flex items-center justify-center w-full lg:w-1/2">
-          <div className="sm:w-full sm:h-full w-[300px] h-[300px]">
-            <Image
-              src={hero}
-              alt="hero"
-              className="w-full h-full object-cover"
-            />
+        <div className=" items-center justify-center sm:flex  lg:w-1/2">
+          <div className="">
+            <Image src={hero} alt="hero" className="w-full h-full" />
           </div>
         </div>
       </div>

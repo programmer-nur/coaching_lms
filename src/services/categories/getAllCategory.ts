@@ -8,7 +8,6 @@ export const getAllCategories = async () => {
     {
       next: {
         revalidate: 24 * 60 * 60,
-        tags: ["all-category"],
       },
     }
   );

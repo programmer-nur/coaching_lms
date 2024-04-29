@@ -17,7 +17,6 @@ export const getAllSubCategories = async (args?: any): Promise<any[]> => {
     {
       next: {
         revalidate: 24 * 60 * 60,
-        tags: ["all-sub-categories"],
       },
     }
   );
